@@ -3,7 +3,7 @@ name: Hello Actions!
 on:
   push:
     branches:
-      -master
+      - master
 
 jobs:
   hello_actions_job:
@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Say hello
         run: |
-          echo "Hello fromm Github Actions!"
+          echo "Hello from Github Actions!"
