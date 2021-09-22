@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  simple_deployment_pipeline:
+  test runner:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -27,8 +27,11 @@ jobs:
           command: npm run test:e2e
           start: npm run start-prod
           wait-on: http://localhost:5000
-      - name: deploy to heroku
-          uses: AkhileshNS/heroku-deploy
+  deploy:
+    runs-on: ubuntu-18.04
+      steps:
+        - uses: actions/checkout@v2
+        - uses: AkhileshNS/heroku-deploy
           with: 
             heroku_api_key: ${{secrets.HEROKU_API_KEY}}
             heroku_app_name: agile-thicket-54021
