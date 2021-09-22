@@ -29,11 +29,11 @@ jobs:
           wait-on: http://localhost:5000
   deploy:
     runs-on: ubuntu-18.04
-      steps:
-        - uses: actions/checkout@v2
-        - uses: AkhileshNS/heroku-deploy
-          with: 
-            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-            heroku_app_name: agile-thicket-54021
-            heroku_email: jaakko.hurtta@outlook.com
+    steps:
+      - uses: actions/checkout@v2
+      - uses: AkhileshNS/heroku-deploy
+        with: 
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: agile-thicket-54021
+          heroku_email: jaakko.hurtta@outlook.com
         
