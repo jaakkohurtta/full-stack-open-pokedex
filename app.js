@@ -11,7 +11,7 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/version', (req, res) => {
-  res.send('v0.11.1 in master branch')
+  res.send('v0.11.2')
 })
 
 app.listen(PORT, () => {
