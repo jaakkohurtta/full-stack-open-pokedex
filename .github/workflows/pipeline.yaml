@@ -50,3 +50,14 @@ jobs:
           WITH_V: true
           DEFAULT_BUMP: patch
           INITIAL_VERSION: 0.11.0
+      - name: post alert to slack
+        if: |
+          always() ||
+          ${{ github.event_name == 'push' }}
+        uses: 8398a7/action-slack@v3.9.3
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+
