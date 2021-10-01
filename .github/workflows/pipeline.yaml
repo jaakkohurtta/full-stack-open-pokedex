@@ -51,7 +51,7 @@ jobs:
           DEFAULT_BUMP: patch
           INITIAL_VERSION: 0.11.0
       - name: post alert to slack
-        if: ${{ github.event_name == 'push' && always() }}
+        if: ${{ always() }}
         uses: 8398a7/action-slack@v3.9.3
         with:
           status: ${{ job.status }}
