@@ -1,7 +1,7 @@
 name: scheduled health check
 
 on:
-  schedule
+  schedule:
     - cron: '10 * * * *'
 
 jobs:
