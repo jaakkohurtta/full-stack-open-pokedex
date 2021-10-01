@@ -10,7 +10,7 @@ on:
 
 jobs:
   pipeline:
-    name: Lint, Test n Build
+    name: ci/cd halfpipe
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
