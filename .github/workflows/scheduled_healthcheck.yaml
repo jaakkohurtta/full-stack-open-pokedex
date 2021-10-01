@@ -1,4 +1,4 @@
-name: scheduled health check
+name: Scheduled health check
 
 on:
   schedule:
