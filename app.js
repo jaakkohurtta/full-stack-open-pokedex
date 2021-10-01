@@ -11,7 +11,7 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/version', (req, res) => {
-  res.send('dev branch')
+  res.send('0.11.4 skip deploy')
 })
 
 app.listen(PORT, () => {
